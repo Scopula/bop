@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[left=8em,right=8em]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{lineno}
+\usepackage{relsize}
+\usepackage{graphicx}
+%\linenumbers
+\renewcommand*{\proofname}{Proof}
+\date{}
+\author{}
+\begin{document}
+\centerline{\textbf{Exercises for Section 11.2}}
+$ $\newline
+\textbf{Ex 1.} $R$ is reflexive, symmetric, and transitive.\\
+$ $\newline
+\textbf{Ex 2.} \\
+$R$ is not reflexive because $(a,a) \not\in R$.\\
+$R$ is not symmetric because $(a, b) \in R$, but $(b,a) \not\in R$.\\
+$R$ is transitive.\\
+$ $\newline
+\textbf{Ex 3.} \\
+$R$ is not reflexive because $(a,a) \not\in R$.\\
+$R$ is not symmetric because $(a,b) \in R$, but $(b,a) \not\in R$.\\
+$R$ is not transitive because $(c,b) \in R $ and $(b,c) \in R$, but $(c,c) \not\in R$.\\
+$ $\newline
+\textbf{Ex 4.} $R$ is reflexive, symmetric, and transitive.\\
+$ $\newline
+\textbf{Ex 5.}\\
+$R$ is not reflexive because $(1,1) \not\in R$.\\
+$R$ is symmetric and transitive.\\
+$ $\newline
+\textbf{Ex 6.}\\
+This is the equality relation on $\mathbb{Z}$.\\
+It is reflexive, symmetric and transitive.\\
+$ $\newline
+\textbf{Ex 7.}\\
+The $16$ different relations on $A=\{a,b\}$:\\
+\begin{itemize}
+  \item 1 - $\emptyset$. This relation is symmetric and transitive, but not reflexive.
+  \item 1 - $\{(a, b), (b,a)\}$. This relation is symmetric, but not reflexive and not transitive. 
+  \item 2 - $\{(a,a), (b,b), (a, b), (b, a)\}, \{(a,a), (b,b)\}$. These relations are reflexive, symmetric and transitive.
+  \item 2 - $\{(a,a)\}, \{(b, b)\}$. These relations are symmetric and transitive, but not reflexive.
+  \item 2 - $\{(a, b)\}, \{(b,a)\}$. These relations are transitive, but not reflexive and not symmetric.
+  \item 4 - $\{(a,a),(a, b)\}, \{(a,a), (b,a)\}, \{(b,b),(a,b)\}, \{(b,b),(b,a)\}$ . These relations are transitive, but not reflexive and not symmetric.  
+  \item 2 - $\{(a,a), (b, b), (a, b)\},\{(a,a), (b, b), (b, a)\}$. These relations are reflexive and transitive, but not symmetric.
+  \item 2 - $\{(a,a), (a, b), (b, a)\},\{(b,b), (a, b), (b, a)\}$. These relations are symmetric, but not reflexive and not transitive.
+\end{itemize}
+\newpage
+\noindent\textbf{Ex 8.}\\
+$R=\{(x, y) \in \mathbb{Z}\times\mathbb{Z} : |x-y|<1 \}$. This relation is the equality relation on $\mathbb{Z}$. The relation is reflexive, symmetric, and transitive.\\
+$ $\newline
+\textbf{Ex 9.}\\
+$R=\{(x, y) \in \mathbb{Z}\times\mathbb{Z} : 2|x-y \}$. This relation is the $\equiv \pmod{2}$ relation on $\mathbb{Z}$. It is reflexive, symmetric and transitive.\\
+$ $\newline
+\textbf{Ex 10.}\\
+$R$ is symmetric and transitive, but not reflexive. Suppose $x \in A$. $R$ is not reflexive because $(x,x) \not\in R$.\\
+$ $\newline
+\textbf{Ex 11.}\\
+$R$ is reflexive, symmetric, and transitive.\\
+$ $\newline
+\textbf{Ex 12. Proposition:} The $|$ (division) relation on $\mathbb{Z}$ is reflexive and transitive.
+\begin{proof}
+$ $\newline
+The division relation is clearly reflexive as every integer is divisable by itself.\\
+$ $\newline
+We now use the direct approach to show that the relation is transitive. Suppose $x|y$ and $y|z$ where $x,y,z \in \mathbb{Z}$. So we have that $y=xa$ and $z=yb$ for some integers $a,b$, by defintion of divisibility. Plugging $y$ in $z=yb$, we get $z=x(ab)$. Thus $x|z$.\\
+\end{proof}
+\noindent \textbf{Ex 13. Proposition:} If $R=\{(x, y) \in \mathbb{R} \times \mathbb{R} : x - y \in \mathbb{Z}\}$, then $R$ is reflexive, symmetric and transitive.
+\begin{proof}
+$ $\newline
+First we show that the relation is reflexive. Note that $x-x=0 \in \mathbb{Z}$ for all $x \in R$. Thus the relation is reflexive.\\
+$ $\newline
+Next we show that the relation is symmetric. Let $(x, y) \in R$. Then $x-y=z$ and $z \in \mathbb{Z}$, by definition of the relation. Multiply both sides by $-1$, we get $y-x=-z$. Because $z$ is an integer, it follows that $-z$ is an integer. Therefore $(y,x) \in R$ and consequently $R$ is symmetric.\\
+$ $\newline
+Finally we show that the relation is transitive. Let $(x, y) \in R$ and $(y, z) \in R$. Then $x-y=a \in \mathbb{Z}$ and $y-z=b \in \mathbb{Z}$. Plugging the second equation into the first, we get $x-y=a \leftrightarrow x - (b+z) = a \leftrightarrow x-z=a+b$. The sum of two integers is an integer, so $a+b$ is an integer and thus $(x, z) \in R$. Hence the relation is transitive.\\
+\end{proof}
+\newpage
+\noindent \textbf{Ex 14. Proposition:} If $R$ is a symmetric and transitive relation on set $A$, and there is an element $a \in A$ for which $(a,x) \in R$ for every $x \in A$, then $R$ is reflexive.
+\begin{proof}
+(Direct.)\\
+Because $(a,x) \in R$ and $R$ is symmetric, it follows that $(x,a) \in R$. Then by the definition of transitive property, since $(x,a) \in R$ and $(a,x) \in R$, it must be the case that $(x,x) \in R$. Thus $R$ is reflexive.\\
+\end{proof}
+\noindent \textbf{Ex 15.} The proposition is false. Let $|A|=1$ and $R=\emptyset$ be a relation on $A$. Then $R$ is symmetric and transitive, but not reflexive.\\
+$ $\newline
+\noindent \textbf{Ex 16. Proposition:}	If $R$ is the relation $R=\{ (x, y) \in \mathbb{Z}\times\mathbb{Z} : x^2 \equiv y^2 \pmod{4} \}$, then it is reflexive, symmetric and transitive.\\
+\begin{proof}
+(Direct.)
+
+\noindent First we show that the relation is reflexive. Suppose $z \in \mathbb{Z}$. Then $z^2-z^2=0$ and $4|0$ implies that $z^2 \equiv z^2 \pmod{4}$. Thus $(z,z) \in R$.\\
+
+\noindent Next we show the symmetric property. Suppose $(a,b) \in R$. Then by definition of modular congruence, it follows that $4|a^2-b^2$. Thus $a^2-b^2=4x$ for some integer $x$. Then we multiply both sides by $-1$, so $a^2-b^2=4x \leftrightarrow (-1)(a^2-b^2)=4x(-1) \leftrightarrow (b^2-a^2)=4(-x)$. Thus $4|b^2-a^2$ and consequently $(b,a) \in R$. Thus the relation is symmetric.\\
+
+\noindent Finally, we show the transitive property. Suppose $(a,b) \ in R$ and $(b,c) \in R$. Then it follows that $a^2-b^2=4i$ and $b^2-c^2=4j$ for some integers $i, j$. Adding the second equation to the first, we get $a^2-b^2+(b^2-c^2)=4i+4j \leftrightarrow a^2-c^2=4(i+j)$. Thus $4|a^2-c^2$ and consequently $(a,c) \in R$. Thus the relation is transitive.\\
+\end{proof}
+
+$ $\newline
+\noindent \textbf{Ex 17.} The relation is reflexive and symmetric, but not transitive. It is not transitive because $(1,2) \in R$ and $(2,3) \in R$, but $(1,3) \not\in R$.\\
+$ $\newline
+\noindent \textbf{Ex 18.}
+\noindent A reflexive, symmetric, but not transitive relation:\\
+Let $R=\{(a,a), (b,b), (c,c), (a,b), (b,a), (b,c), (c,b)\}$ be a relation on $A=\{a,b,c\}$.\\
+$ $\newline
+A reflexive, but not symmetric and not transitive relation:\\
+Let $R=\{(a,a), (b,b), (c,c), (a,b), (b,c)\}$ be a relation on $A=\{a,b,c\}$.\\
+$ $\newline
+A symmetric and transitive, but not reflexive relation:\\
+Let $R=\{(a,a)\}$ be a relation on $A=\{a,b\}$.\\
+\end{document}
+

@@ -1,0 +1,181 @@
+\documentclass{article}
+\usepackage[left=8em,right=8em]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{lineno}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+%\linenumbers
+\renewcommand*{\proofname}{Proof}
+\date{}
+\author{}
+\begin{document}
+\centerline{\textbf{Exercises for Section 11.3}}
+$ $\newline
+\textbf{Ex 1.}\\
+$[1]=\{1\}$\\
+$[2]=[3]=\{2,3\}$\\
+$[4]=[5]=[6]=\{4,5,6\}$\\
+$ $\newline
+\textbf{Ex 2.}\\
+$R = \{(a,a),(b,b),(c,c),(d,d),(e,e),(a,d),(d,a),(b,c),(c,b),(e,d),(d,e),(a,e),(e,a)\}$.\\
+$ $\newline
+\textbf{Ex 3.}\\
+$R=\{(a,a),(b,b),(c,c),(d,d),(e,e),(a,d),(d,a),(b,c),(c,b)\}$.\\
+$ $\newline
+\textbf{Ex 4.}\\
+$R$ has one equivalence class: $\{a,b,c,d,e\}$.\\
+$ $\newline
+\textbf{Ex 5.}\\
+The two equivalence relations on $A$ are $\{(a,a),(b,b)\}$ and $\{(a,a),(a,b),(b,a),(b,b)\}$.\\
+$ $\newline
+\textbf{Ex 6.}\\
+The five different equivalence relations on $A$ are:\\
+$\{(a,a),(b,b),(c,c)\}$\\
+$\{(a,a),(b,b),(c,c),(a,b),(b,a)\}$\\
+$\{(a,a),(b,b),(c,c),(b,c),(b,c)\}$\\
+$\{(a,a),(b,b),(c,c),(a,c),(c,a)\}$\\
+$\{(a,a),(b,b),(c,c),(a,b),(b,a),(b,c),(c, b),(a,c),(c,a)\}$\\
+\newpage
+\noindent\textbf{Ex 7.}\\
+\textbf{Lemma 1:} Let $x, y \in \mathbb{Z}$. $x$ and $y$ have the same parity if and only if $3x - 5y$ is even.
+\begin{proof}
+$ $\newline
+First we show that if $x$ and $y$ have the same parity, then $3x-5y$ is even. We consider two cases.\\
+Case 1. Suppose $x$ and $y$ are even.\\
+\indent Then $x=2a$ and $y=2b$ for some integers $a, b$. Thus $3x-5y=3(2a)-5(2b)=2(3a-5b)$ is even.
+Case 2. Suppose $x$ and $y$ are odd.\\
+\indent Then $x=2a+1$ and $y=2b+1$ for some integers $a, b$. Thus $3x-5y=3(2a+1)-5(2b+1)=$\\
+\indent $6a+3-10b-5=6a-10b-2=2(3a-5b-1)$ is even.\\
+
+\noindent Secondly we show that if $3x-5y$ is even, then $x$ and $y$ have the same parity. We use the contrapositive technique with two cases.\\
+Case 1. Suppose $x$ is even and $y$ is odd.\\
+\indent Then $x=2a$ and $y=2b+1$ for some integers $a, b$. Thus $3x-5y=3(2a)-5(2b+1)=6a-10b-5=$\\
+\indent $2(3a-5b-2)-1$ is odd.\\
+Case 2. Suppose $x$ is odd and $y$ is even.\\
+\indent Then $x=2a+1$ and $y=2b$ for some integers $a, b$. Thus $3x-5y=3(2a+1)-5(2b)=6a+3-10b=$\\
+\indent $2(3a-5b+1)+1$ is odd.\\
+
+\noindent Therefore $x$ and $y$ have the same parity if and only if $3x - 5y$ is even.\\
+
+\end{proof}
+\noindent\textbf{Proposition:} If $R=\{(x,y) \in \mathbb{Z}\times\mathbb{Z} : 2|(3x-5y) \}$, then $R$ is an equivalence relation.
+\begin{proof}
+%First we show that $R$ is reflexive. Suppose $z \in \mathbb{Z}$. Then observe that $3z-5z=(3-5)z=-2z=2(-z)$. Thus $(z,z) \in R$ and consequently $R$ is reflexive.\\
+$ $\newline
+\noindent The reflexive, symmetric, and transitive properties of $R$ follow from lemma 1.\\
+\end{proof}
+\noindent $R$ has two equivalence classes, the set of odd and the set of even integers.\\
+
+\newpage
+\noindent \textbf{Ex 8. Proposition:} If $R=\{(x, y) \in \mathbb{Z}\times\mathbb{Z} : x^2 + y^2 \text{ is even}\}$, then $R$ is an equivalence relation.\\
+\begin{proof}
+$ $\newline
+First we show that $R$ is reflexive. Let $a \in \mathbb{Z}$. Suppose $a$ is even, so $a=2b$ for some integer $b$. Then $a^2+a^2=4b^2+4b^2=2(4b^2)$ is even. Likewise, suppose $a$ is odd, then $a=2b+1$ for some integer $b$. So $a^2+a^2=(2b+1)^2+(2b+1)^2=2(4b^2+4b+1)$ is even. In either case we have that $a \in R$.\\
+
+\noindent Secondly we show that $R$ is symmetric. Suppose $(x, y) \in R$. Then $x^2+y^2=2a$ for some integer $a$. By the commutative property of addittion, it follows that $x^2+y^2=y^2+x^2=2a$. Thus $(y, x) \in R$.\\
+
+\noindent Finally we show that $R$ is transitive. Suppose $(x, y), (y,z) \in R$. So $x^2+y^2=2a$ and $y^2+z^2=2b$ for some integers $a, b$. After subtracting the latter equation from the former, we get $x^2+y^2-(y^2+z^2)=2a-2b \leftrightarrow x^2-z^2=2(a-b)$. Thus $x^2-z^2$ is even which implies that $x^2+z^2$ is even. Therefore $(x, z) \in R$.\\
+\end{proof}
+\noindent $R$ has two equivalence classes, the set of odd and the set of even integers.\\
+
+\noindent \textbf{Ex 9. Proposition:} Suppose $R=\{ (x, y) \in \mathbb{Z} \times \mathbb{Z} : 4|(x+3y) \}$, then $R$ is an equivalence relation on $\mathbb{Z}$.
+\begin{proof}
+$ $\newline
+\noindent First we show that $R$ is reflexive. Suppose $a \in \mathbb{Z}$, then $a+3a=4a$ which is divisable by $4$. Thus $(a,a) \in R$.\\
+
+\noindent Secondly we show that $R$ is symmetric. Suppose $(x, y) \in R$, so $x+3y=4a$ for some integer $a$. Multiply by $3$, we get $3x+9y=12a \leftrightarrow 3x+y=12-8y=4(3-2y)$ which is divisable by $4$. Thus $(y,x) \in R$.\\
+
+\noindent Finally we show that $R$ is transitive. Suppose $(x, y), (y,z) \in R$. Then $x+3y=4a$ and $y+3z=4b$ for some integers $a, b$. Add the latter equation to the former, we get $x+3y+(y+3z)=4a+4b \leftrightarrow x+3z=4(a+b-y)$. Thus $(x,z) \in R$.\\
+\end{proof}
+
+\noindent Equivalence classes:\\
+$[0] = \{ x \in \mathbb{Z} : (x, 0) \in R \}=\{x \in \mathbb{Z} : 4|x \} = \{...,-8,-4,0,4,8,...\}$.\\
+$[1] = \{ x \in \mathbb{Z} : (x, 1) \in R \}=\{x \in \mathbb{Z} : x \equiv 1 \pmod{4} \} = \{...,-7,-3,1,5,9,...\}$.\\
+$[2] = \{ x \in \mathbb{Z} : (x, 2) \in R \}=\{x \in \mathbb{Z} : x \equiv 2 \pmod{4} \} = \{...,-2,2,6,10,...\}$.\\
+$[3] = \{ x \in \mathbb{Z} : (x, 3) \in R \}=\{x \in \mathbb{Z} : x \equiv 3 \pmod{4} \} = \{...,-5,-1,3,7,11,...\}$.\\
+
+\newpage
+\noindent \textbf{Ex 10. Proposition:} Suppose $R$ and $S$ are two equivalence relations on a set $A$. $R \cap S$ is also an equivalence relation.
+\begin{proof}
+$ $\newline
+First we show that $R \cap S$ is reflexive. Because $R$ and $S$ are equivalence relations, it follows that $(a,a) \in R$ and $(a, a) \in S$ for all $a \in A$. Thus $(a,a) \in R \cap S$.\\
+
+\noindent Then we show that $R \cap S$ is symmetric. Suppose $(a, b) \in R \cap S$. Then $(a, b) \in R$ and $(a, b) \in S$, by definition of set intersection. Because $R$ and $S$ are equivalence relations, it follows that $(b,a) \in R$ and $(b, a) \in S$. Thus $(b,a) \in R \cap S$.\\
+
+\noindent Finally we show that $R \cap S$ is transitive. Suppose $(a, b), (b,c) \in R \cap S$. Then $(a, b),(b,c) \in R$ and $(a, b),(b,c) \in S$, by definition of set intersection. Because $R$ and $S$ are equivalence relations, it follows that $(a,c) \in R$ and $(a, c) \in S$. Thus $(a,c) \in R \cap S$.\\
+\end{proof}
+\noindent \textbf{Ex 11. Disproof:} Consider the equivalence relation $R=\mathbb{Z} \times \mathbb{Z}$ on $\mathbb{Z}$. Then $R$ has one equivalence class, namely $[0]=\mathbb{Z}$.\\
+
+\noindent \textbf{Ex 12. Disproof:} Let $R=\{(1,1), (2,2), (3,3), (1,2), (2,1)\}$ and $S=\{(1,1),(2,2),(3,3),(2,3),(3,2)\}$ be equivalence relations on $A=\{1,2,3\}$. Then $R \cup S = \{(1,1), (2,2), (3,3), (1,2), (2,1), (2,3), (3,2)\}$ is not an equivalence relation on $A$ because $R \cup S$ is not transitive. It is not transitive because $(1,2), (2,3) \in R \cup S$, but $(1,3) \not\in R \cup S$.\\
+
+\noindent \textbf{Ex 13.} There are $\dfrac{|A|}{m}$ equivalence classes of size $m$. There are $m^2$ pairs corresponding to each class. Thus $|R|=\dfrac{|A|}{m} \cdot{} m^2=m|A|$.\\
+
+\newpage
+
+\noindent \textbf{Ex 14. Proposition:} $S$ is an equivalence relation and $R \subseteq S$.
+
+\begin{proof}
+$ $\newline
+
+\noindent Because $R$ is reflexive, it follows that $(x,x) \in R$ for all $x \in A$. So $(x,x) \in S$, by definition of $S$. Thus $S$ is reflexive.\\
+
+\noindent We show that $S$ is symmetric. Suppose $(x, y) \in S$. That means that there exists $n$ such that
+\begin{align*}
+(x,x_1), (x_1, x_2), ..., (x_{n-1}, x_{n}), (x_{n}, y) \in R
+\end{align*}
+Because $R$ is symmetric, it is must also be that the case that
+\begin{align*}
+(x_1,x), (x_2, x_1), ..., (x_n, x_{n-1}), (y, x_{n}) \in R
+\end{align*}
+Thus $(y, x) \in S$ and consequently $S$ is symmetric.\\
+
+\noindent We show that $S$ is transitive. Suppose $(x, y) \in S$ and $(y, z) \in S$. Then, by definition $S$, there exists $n_1, n_2 \in \mathbb{N}$ such that
+\begin{align*}
+(x,x_1), (x_1, x_2), ..., (x_{n_1-1}, x_{n_1}), (x_{n_1}, y) \in R\\
+(y,y_1), (y_1, y_2), ..., (y_{n_2-1}, y_{n_2}), (y_{n_2}, z) \in R
+\end{align*}
+In other words, there is a path from $x$ to $z$ in $R$. So there exists
+\begin{align*}
+(x,x_1), (x_1, x_2), ..., (x_{n_1-1}, x_{n_1}), (x_{n_1}, y), (y,y_1), (y_1, y_2), ..., (y_{n_2-1}, y_{n_2}), (y_{n_2}, z) \in R
+\end{align*}
+Thus $(x, z) \in S$ and consequently $S$ is transitive.\\
+\end{proof}
+
+\noindent Note: we have skipped showing $R \subseteq S$ and that $S$ is the unique smallest equivalence relation on $A$ containing $R$.\\
+
+\noindent \textbf{Ex 15.} An equivalence relation $R$ on set $A$ with $4$ equivalence classes is a graph with $4$ connected components. The number of different equivalence relations $S$ on $A$ such that $R \subseteq S$ is then the number of ways to merge these $4$ connected components. This is equivalent to the \href{https://en.wikipedia.org/wiki/Bell_number}{Bell number}; the number of ways to partition a finite set. Thus the answer is $B_4 = 15$ where $B_4$ denotes the $4$-th bell number. Below we enumerate the $15$ different partitions.\\
+ 
+
+\noindent Let $CC=\{1,2,3,4\}$ denote the set of connected components of $R$. Then the $15$ partitions are:\\
+\begin{enumerate}
+	\item $\{\{1\},\{2\},\{3\},\{4\}\}$
+	\item $\{\{1,2\},\{3\},\{4\}\}$
+	\item $\{\{1,3\},\{2\},\{4\}\}$
+	\item $\{\{1,4\},\{2\},\{3\}\}$
+	\item $\{\{2,3\},\{1\},\{4\}\}$
+	\item $\{\{2,4\},\{1\},\{3\}\}$
+	\item $\{\{3,4\},\{1\},\{2\}\}$
+	\item $\{\{1,2\},\{3,4\}\}$
+	\item $\{\{1,3\},\{2,4\}\}$
+	\item $\{\{1,4\},\{2,3\}\}$
+	\item $\{\{1\},\{2,3,4\}\}$
+	\item $\{\{2\},\{1,3,4\}\}$
+	\item $\{\{3\},\{1,2,4\}\}$
+	\item $\{\{4\},\{1,2,3\}\}$
+	\item $\{\{1,2,3,4\}\}$
+\end{enumerate}
+
+\noindent \textbf{Ex 16. Proposition:} Relation $=$ defined on page $213$ is transitive.
+\begin{proof}
+(Direct.) Suppose $\dfrac{a}{b} = \dfrac{c}{d}$ and $\dfrac{c}{d} = \dfrac{e}{f}$.\\
+So we have that $ad=bc$ and $cf=de$. Substituing the former into the latter yields $\left(\dfrac{ad}{b}\right) f=de \leftrightarrow af = be \leftrightarrow \dfrac{a}{b} = \dfrac{e}{f}$. Thus the relation $=$ is transitive.\\
+\end{proof}
+
+\end{document}
+
