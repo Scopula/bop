@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[left=8em,right=8em]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{lineno}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+%\linenumbers
+\renewcommand*{\proofname}{Proof}
+\date{}
+\author{}
+\begin{document}
+\centerline{\textbf{Exercises for Section 11.4}}
+$ $\newline
+\textbf{Ex 1.}\\
+Partitions on $A=\{a,b\}$
+\begin{enumerate}
+\item \{\{a, b\}\}
+\item \{\{a\}, \{b\}\}
+\end{enumerate}
+\textbf{Ex 2.}\\
+Partitions on $A=\{a,b,c\}$
+\begin{enumerate}
+\item \{\{a, b, c\}\}
+\item \{\{a\}, \{b, c\}\}
+\item \{\{b\}, \{a, c\}\}
+\item \{\{c\}, \{a, b\}\}
+\item \{\{a\}, \{b\}, \{c\}\}
+\end{enumerate}
+\textbf{Ex 3.}\\
+The equivalence relation $\equiv \pmod{4}$ partitions $\mathbb{Z}$ into\\ $\{[0], [1], [2], [3]\}=\{\{...,-4,0,4,...\},\{...,-3,1,5,...\},\{...,-2,2,6,...\}, \{...,-1,3,7,...\},\}$.\\
+
+\noindent \textbf{Ex 4. Proposition:} Suppose $P$ is a partition of set $A$, $R$ is a relation on $A$ such that $(x, y) \in R$ if and only if $x, y \in X$ for some $X \in P$. Then $R$ is an equivalence relation on $A$.
+\begin{proof}
+$ $\newline
+First we show that $R$ is reflexive. Suppose $x \in A$. Because $P$ is a partition of $A$, we have that $x \in X$ for some $X \in P$. By definition of $R$, it follows that $(x, x) \in R$ and consequently $R$ is reflexive.\\
+
+\noindent Next we show that $R$ is symmetric. Suppose $(x, y) \in R$. So $x, y \in X$ for some $X \in P$. From this it directly follows that $(y, x) \in R$, thus $R$ is symmetric.\\
+
+\noindent Finally we show that $R$ is transitive. Suppose $(a, b), (b,c) \in R$. Then $a,b \in X_1$ and $b, c \in X_2$ for some $X_1, X_2 \in P$. Then the definition of $P$ (two different subsets of P have no elements in common) combined with the fact that $b \in X_1$ and $b \in X_2$, implies that $X_1=X_2$. So $a, b, c \in X_1$, implies that $(a, c) \in R$. Thus $R$ is transitive.\\
+
+\end{proof}
+
+\newpage
+
+\noindent \textbf{Ex 4. Proposition:} Suppose $P$ is a partition of set $A$, $R$ is a relation on $A$ such that $(x, y) \in R$ if and only if $x, y \in X$ for some $X \in P$. Then $P$ is the set of equivalence classes of $R$.
+
+\begin{proof}
+$ $\newline
+
+\noindent Skipped for now. There is a non-cogent proof \href{https://www.slader.com/textbook/9780989472111-book-of-proof-2nd-edition/188/exercises/4/}{here}.
+%\noindent Let $EC = \{[a] : a \in A \}$ be the set of equivalence classes of $R$. We want to show that $EC=P$. To do so we need to show that the union of sets $[a]$ equals $A$ and that if $[a]\neq [b]$, then $[a] \cap [b] = \emptyset$.
+
+%Is this a reasonable strategy? https://imgur.com/a/ShjkDTq If I show EC is a partition on A, it must be the case that EC=P (because each equivalence relation has unique EC and P).
+\end{proof}
+
+\noindent \textbf{Ex 5.} $R$ is the equivalence relation $\equiv \pmod{2}$.\\
+
+\noindent \textbf{Ex 6.} $R$ is the equivalence relation defined as: $(x, y) \in R$ if and only if $|x|=|y|$.\\
+\end{document}
+
