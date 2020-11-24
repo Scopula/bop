@@ -1,0 +1,190 @@
+\documentclass{article}
+\usepackage[left=8em,right=8em]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{lineno}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+%\linenumbers
+\renewcommand*{\proofname}{Proof}
+\date{}
+\author{}
+\begin{document}
+\centerline{\textbf{Exercises for section 12.2}}
+$ $\newline
+\noindent\textbf{Ex 1.} Let $f:A \rightarrow B$ be defined as $f=\{(1,a), (2,a), (3, a), (4, a)\}$. It is not injective because $f(1)=f(2)=a$. Also, it is not surjective because for all $x \in A$, $f(x) \neq b$.\\
+
+\noindent\textbf{Ex 2. Proposition:} $f: (0, \infty) \rightarrow \mathbb{R}$ defined as $f(n)=ln(n)$ is bijective.
+\begin{proof}
+$ $\newline 
+We show that $f$ is injective using the contrapositive approach. Suppose $a, b \in (0, \infty)$ and $f(a)=f(b)$. So $f(a)=f(b) \leftrightarrow ln(a)=ln(b) \leftrightarrow a=b$. Thus $f$ is injective.\\
+
+\noindent Let $b \in \mathbb{R}$ and observe that when $n=e^b \in (0, \infty)$ we have $f(n)= ln(e^b)=b$. Thus $f$ is surjective.\\
+\end{proof}
+
+\noindent\textbf{Ex 3.} Observe that $cos(0)=cos(2\pi)=1$, thus the function is not injective. Also, observe that for all $a \in \mathbb{R}$, $cos(a) \neq 2$. But $2 \in \mathbb{R}$, thus the function is not surjective. The new domain and codomain would make the function surjective, but not injective.\\
+
+\noindent\textbf{Ex 4.} $f$ is not surjective because $(0,0) \in \mathbb{Z}^2$, but $f(x) \neq (0,0)$ for all $x \in \mathbb{Z}$. We proceed to show that $f$ is injective.\\
+
+\noindent\textbf{Proposition:} If $f: \mathbb{Z} \rightarrow \mathbb{Z}^2$ is defined as $f(n)=(2n, n+3)$, then $f$ is injective.
+\begin{proof}
+(Contrapositive.) Suppose $a, b \in \mathbb{Z}$ and $f(a)=f(b)$.\\
+Because $f(a)=f(b)$, we have that $(2a, a+3) = (2b, b+3)$. Thus it must be the case that $2a=2b \leftrightarrow a = b$. Hence $a=b$.\\
+\end{proof}
+
+\noindent\textbf{Ex 5.} $f$ is not surjective because $2 \in \mathbb{Z}$, but $f(x) \neq 2$ for all $x \in \mathbb{Z}$. We proceed to show that $f$ is injective.\\
+
+\noindent\textbf{Proposition:} If $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined as $f(n)=2n+1$, then $f$ is injective.
+\begin{proof}
+(Contrapositive.) Suppose $a, b \in \mathbb{Z}$ and $f(a)=f(b)$.\\
+Because $f(a)=f(b)$, we have that $2a+1=2b+1$. Then $2a+1=2b+1 \leftrightarrow a = b$. Hence $a=b$.\\
+\end{proof}
+
+\noindent\textbf{Ex 6.} $f$ is not injective because $f(4, 0) = f(0, -3) = 12$. We proceed to show that $f$ is surjective.\\
+
+\noindent\textbf{Proposition:} If $f: \mathbb{Z}^2 \rightarrow \mathbb{Z}$ is defined as $f(n,m)=3n-4m$, then $f$ is surjective.
+\begin{proof}
+(Direct.) Suppose $b \in \mathbb{Z}$.\\
+By Bezout's identity, we have that $3x+(-4)y=gcd(3, -4)$ for some integers $x, y$. So $3x+(-4)y=1$, since $gcd(3,-4)=1$. Then multiplying both sides by $b$ we get $3bx-4by=b$. Thus there exists integers $n=bx$ and $m=by$ such that $f(n,m)=3n-4m=b$.\\
+\end{proof}
+
+\noindent\textbf{Ex 7.} $f$ is not injective because $f(2, 0)=f(0, -1)=4$. $f$ is not surjective because  $f(n, m)$ is even for all integers $n, m$. So for an odd $b \in \mathbb{Z}$ it follows that $f(n,m) \neq b$.\\
+
+\noindent\textbf{Ex 8. Proposition} $f: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}\times\mathbb{Z}$ defined as $f(m, n)=(m+n, 2m+n)$ is bijective.
+\begin{proof}
+$ $\newline
+First we show that $f$ is injective using the contrapositive approach. Suppose $f(a, b)=f(a', b')$ where $a, b, a', b' \in \mathbb{Z}$. So we have the following system of equations:
+\begin{align*}
+a + b = a' + b' \text{ and } 2a + b = 2a'+b'
+\end{align*}
+Solving the first equation for $a$ and substituing it into the second equation we get $2a+b=2a'+b' \leftrightarrow 2(a'+b'-b)+b=2a'+b' \leftrightarrow 2a'+2b'-2b+b=2a'+b \leftrightarrow 2b'=2b \leftrightarrow b' = b$. With this, we can simplify the first equation $a+b = a'+b' \leftrightarrow a=a'$. Thus $a=a'$ and $b=b'$, and consequently $f$ is injective.\\
+
+\noindent Then we show that $f$ is surjective. Let $a,b \in \mathbb{Z}$. Observe that when $m=b-a,n=2a-b$ we have $f(m, n)= (m+n, 2m+n)=((b-a)+(2a-b), 2(b-a)+(2a-b))=(a, b)$. Thus $f$ is surjective.
+
+%\noindent Then we show that $f$ is surjective using the direct approach. We must show that for any $a, b \in \mathbb{Z}$, there exists integers $m,n$ such that¤&T $f(m, n)=(a, b)$. This leads to the following system of equations:
+%\begin{align*}
+%m + n = a \text{ and } 2m + n = b
+%\end{align*}
+%Solving the first equation for $m$ and substituting it into the second equation we get $2m + n = b \leftrightarrow 2(a-n) + n = b \leftrightarrow n=2a-b$. Plugging $n$ into the first equation we get $m + n = a \leftrightarrow m + (2a-b)=a \leftrightarrow m=b-a$. Thus $f(b-a, 2a-b)=(a, b)$ and consequently $f$ is surjective.\\
+\end{proof}
+
+\noindent\textbf{Ex 9. Proposition} $f: \mathbb{R} - \{2\} \rightarrow \mathbb{R} - \{5\}$ defined as $f(x)=\dfrac{5x+1}{x-2}$ is bijective.
+\begin{proof}
+$ $\newline
+First we show that $f$ is injective using the contrapositive approach. Suppose $f(a)=f(b)$ where $a, b \in \mathbb{R}, a, b \neq 2$. Then $f(a)=f(b) \leftrightarrow \dfrac{5a+1}{a-2}=\dfrac{5b+1}{b-2} \leftrightarrow 5ab-10a+b-2=5ab-10b+a-2 \leftrightarrow -11a=-11b \leftrightarrow a = b$. Thus $a=b$ and consequently $f$ is injective.\\
+
+\noindent Then we show that $f$ is surjective. Let $b \in \mathbb{R}, b \neq 5$. Observe that when $x=\dfrac{2b+1}{b-5}, x \neq 2$ we have $f(x)=\dfrac{5x+1}{x-2}=\dfrac{5\left(\dfrac{2b+1}{b-5}\right)+1}{\left(\dfrac{2b+1}{b-5}\right)-2}=\dfrac{\left(\dfrac{10b+5}{b-5}\right)+\left(\dfrac{b-5}{b-5}\right)}{\left(\dfrac{2b+1}{b-5}\right)+\left(\dfrac{-2b+10}{b-5}\right)}=\dfrac{\left(\dfrac{11b}{b-5}\right)}{\left(\dfrac{11}{b-5}\right)}=\dfrac{11b}{11}=b$. Thus $f$ is surjective.\\
+\end{proof}
+\newpage
+\noindent\textbf{Ex 10. Proposition} $f: \mathbb{R} - \{1\} \rightarrow \mathbb{R} - \{1\}$ defined as $f(x)=\left(\dfrac{x+1}{x-1}\right)^3$ is bijective.\\
+\begin{proof}
+First we show that $f$ is injective using the contrapositive approach. Suppose $a, b \in \mathbb{R}, a,b \neq 1$ and $f(a)=f(b)$. Then $f(a)=f(b) \leftrightarrow \left(\dfrac{a+1}{a-1}\right)^3 = \left(\dfrac{b+1}{b-1}\right)^3  \leftrightarrow \dfrac{a+1}{a-1} = \dfrac{b+1}{b-1} \leftrightarrow ab-a+b-1=ab-b+a-1 \leftrightarrow -2a=-2b \leftrightarrow a = b$. Thus $a=b$ and consequently $f$ is injective.\\
+
+\noindent Then we show that $f$ is surjective. Let $b \in \mathbb{R}, b \neq 1$. Observe that when $x=\dfrac{\sqrt[3]{b}+1}{\sqrt[3]{b}-1}, x \neq 1$ we have
+\begin{align*}
+f(x)=\left(\dfrac{x+1}{x-1}\right)^3=\left(\dfrac{\dfrac{\sqrt[3]{b}+1}{\sqrt[3]{b}-1}+1}{\dfrac{\sqrt[3]{b}+1}{\sqrt[3]{b}-1}-1}\right)^3=\left(\dfrac{\dfrac{\sqrt[3]{b}+1}{\sqrt[3]{b}-1}+\dfrac{\sqrt[3]{b}-1}{\sqrt[3]{b}-1}}{\dfrac{\sqrt[3]{b}+1}{\sqrt[3]{b}-1}-\dfrac{\sqrt[3]{b}-1}{\sqrt[3]{b}-1}}\right)^3=\left(\dfrac{\dfrac{2\sqrt[3]{b}}{\sqrt[3]{b}-1}}{\dfrac{2}{\sqrt[3]{b}-1}}\right)^3=\left(\dfrac{2\sqrt[3]{b}}{2}\right)^3=\left(\sqrt[3]{b}\right)^3=b
+\end{align*}
+Thus $f$ is surjective.\\
+\end{proof}
+
+\noindent \textbf{Ex 11.} $\theta$ is not surjective because $0 \in \mathbb{Z}$, but for any $a \in \{0,1\},b \in \mathbb{N}$ we have $f(a, b) \neq 0$. We proceed to show that $\theta$ is injective.
+\begin{proof}
+(Contrapositive.) Suppose $a, a' \in \{0,1\}, b, b' \in \mathbb{N}$, and $\theta(a, b)=\theta(a', b')$.\\
+So we have that $\theta(a, b)=\theta(a', b') \leftrightarrow (-1)^ab=(-1)^{a'}b'$. We consider two cases.\\
+
+\noindent Case 1. Suppose $a=0$.\\
+\indent Then LHS is $(-1)^ab=b$ is positive. Thus RHS must also be positive, which means that $a'=0$. So \indent $a=a'$ which implies that $(-1)^ab=(-1)^{a'}b' \leftrightarrow b = b'$.\\
+
+\noindent Case 2. Suppose $a=1$.\\
+\indent Then LHS is $(-1)^ab=-b$ is negative. Thus RHS must also be negative, which means that\\\indent $a'=1$. So $a=a'$ which implies that $(-1)^ab=(-1)^{a'}b' \leftrightarrow b = b'$.\\
+
+\noindent In any case we have that $a=a'$ and $b=b'$. Thus $\theta$ is injective.\\
+\end{proof}
+
+\newpage
+
+\noindent \textbf{Ex 12. Proposition:} $\theta: \{0,1\} \times \mathbb{N} \rightarrow \mathbb{Z}$ defined as $\theta(a, b)=a-2ab+b$ is bijective.
+\begin{proof}
+$ $\newline
+We show that $\theta$ is injective using the contrapositive approach. Suppose $a, a' \in \{0, 1\}, b, b \in \mathbb{N}$, and $\theta(a,b)=\theta(a', b')$. So we have that $\theta(a, b)=\theta(a', b') \leftrightarrow a-2ab+b=a'-2a'b'+b'$. We consider two cases.\\
+
+\noindent Case 1. Suppose $a=0$.\\
+\indent Consider $a'=1$, then $a-2ab+b=a'-2a'b'+b' \leftrightarrow b = 1 - b'$. Because $b' \in \mathbb{N}$ we have that $b \leq 0$.\\
+\indent Thus we have have a contradiction, $b \leq 0$ and $b > 0$. So it must be the case that $a' = a = 0$ and\\\indent consequently $a-2ab+b=a'-2a'b'+b' \leftrightarrow b = b̈́'$.\\
+
+\noindent Case 2. Suppose $a=1$.\\
+\indent Consider $a' = 0$, then $a-2ab+b=a'-2a'b'+b' \leftrightarrow 1-b=b'$. Because $b \in \mathbb{N}$ we have that\\
+\indent $b' \leq 0$. Thus we have have a contradiction, $b' \leq 0$ and $b' > 0$. So it must be the case that $a' = a = 1$ and\\
+\indent consequently $a-2ab+b=a'-2a'b'+b' \leftrightarrow b = b̈́'$.\\
+
+\noindent In any case we have that $a=a'$ and $b=b'$. Thus $\theta$ is injective.\\
+
+\noindent Next we show that $f$ is surjective. Let $a \in \{0, 1\}, b \in \mathbb{N}$. As previously noted, we have $\theta(a, b)=b$ when $a=0$ and $\theta(a,b)=1-b$ when $a=1$. Then
+\begin{align*}
+Im(\theta) = Im(\theta(0, b)) \cup Im(\theta(1, b)) = \mathbb{N} \cup \{1-x : x \in \mathbb{N}\} = \mathbb{N} \cup \{...,-3,-2,-1,0\} =\mathbb{Z}=Cdm(\theta)
+\end{align*}
+Where $Im$ and $Cdm$ denote image and codomain respectively. Thus $f$ is surjective.\\
+\end{proof}
+
+\noindent \textbf{Ex 13.} $f$ is neither injective or surjective.\\
+
+\noindent When $x=0$, $f(x, y)=(0,0)$ for all $y \in \mathbb{R}$. E.g. $f(0,1)=f(0,2)=(0,0)$, thus $f$ is not injective.\\ 
+
+\noindent Then observe that $(3, 0) \in \mathbb{R} \times \mathbb{R}$, but $(3, 0) \not\in f$. Thus $f$ is not surjective.\\
+
+\noindent \textbf{Ex 14.} Let $P$ denote the powerset. $\theta: P(\mathbb{Z}) \rightarrow P(\mathbb{Z})$ defined as $\theta(X)=\overline{X}$ is bijective.
+
+\begin{proof}
+$ $\newline
+We first show that $\theta$ is injective using the contrapositive approach. Suppose $X,Y \in P(\mathbb{Z})$ and $\theta(X) = \theta(Y)$. So $\theta(X) = \theta(Y) \leftrightarrow \overline{X} = \overline{Y} \leftrightarrow X = Y$. Thus $\theta$ is injective.\\
+
+\noindent Then we show that $\theta$ is surjective. Suppose $Y \in P(\mathbb{Z})$. Observe then that when $X = \overline{Y} \in P(\mathbb{Z})$ we have $\theta(X)=\overline{X} = \overline{\overline{Y}} = Y$. Thus we have shown that for any set $Y$ there exists a set $X$ such that $\theta(X)=Y$. Thus $\theta$ is surjective.\\
+\end{proof}
+
+\newpage
+
+\noindent \textbf{Ex 15.} Let $X = \{A,B,C,D,E,F,G\}, Y=\{1,2,3,4,5,6,7\}$, and $f: X \rightarrow Y$.\\
+
+\noindent Each element in the domain must point to one element in the codomain. Each element in $X$ can mapped to any element in $Y$. So the number of $f$ functions is $|Y|^{|X|}=7^7=823543$.\\
+
+\noindent For injective functions, it must be the case that each element in $X$ points to a unique element in $Y$. We can only do this if the domain and codomain are of the same cardinality, as in this case. Thus there $|X|!=|Y|!=7!=5040$ number of $f$ functions.\\
+
+\noindent When domain and codomain cardinality are the same, all injective functions counted above are surjective. Moreover, these are the only surjective functions. Thus there are $5040$ surjective $f$ functions.\\
+
+\noindent Thus there are $5040$ bijective $f$ functions.\\
+
+\noindent \textbf{Ex 16.} Let $X = \{A,B,C,D,E\}, Y=\{1,2,3,4,5,6,7\}$, and $f: X \rightarrow Y$.\\
+
+\noindent There are $|Y|^{|X|}=7^5=16807$ $f$ functions. There are $\dfrac{|Y|!}{\left(|Y|-|X|\right)!}=\dfrac{7!}{2!}=2520$ injective $f$ functions. Note that because $|X| < |Y|$, we cannot map each element in $X$ uniquely to an element in $Y$. So by the pigeonhole principle there are $0$ surjective $f$ functions. Thus there are $0$ bijective $f$ functions.\\
+
+\noindent \textbf{Ex 17.} Let $X = \{A,B,C,D,E,F,G\}, Y=\{1,2\}$, and $f: X \rightarrow Y$.\\
+
+\noindent There are $|Y|^{|X|}=2^7=128$ $f$ functions. By the pigeonhole principle, it follows that there are $0$ injective functions. Of the $128$ possible $f$ functions, only two are not surjective. These two functions map all elements from $X$ to one element in $Y$. Thus there are $128-2=126$ surjective $f$ functions. Finally, because there are $0$ injective functions, there are also $0$ bijective $f$ functions.\\
+
+\newpage
+
+\noindent \textbf{Ex 18. Proposition:} $f: \mathbb{N} \rightarrow \mathbb{Z}$ defined as $f(n)=\dfrac{(-1)^n(2n-1)+1}{4}$ is bijective.
+\begin{proof}
+$ $\newline
+First we show that $f$ is injective using the contrapositive approach. Suppose $a, b \in \mathbb{•}$ and $f(a)=f(b)$. So we have $f(a)=f(b) \leftrightarrow \dfrac{(-1)^a(2a-1)+1}{4} = \dfrac{(-1)^b(2b-1)+1}{4} \leftrightarrow (-1)^a(2a-1)=(-1)^b(2b-1)$. Note that $(2a-1)$ and $(2b-1)$ are both positive. Thus it must be the case that $(-1)^a=(-1)^b$. So we can cancel that factor. Then $(-1)^a(2a-1)=(-1)^b(2b-1)\leftrightarrow 2a-1=2b-1 \leftrightarrow a=b$. Thus $f$ is injective.\\
+
+\noindent Then we show that $f$ is surjective. Let $b \in \mathbb{Z}$. We consider two cases.\\
+
+\noindent Case 1. Suppose $b$ is a positive integer.\\
+\indent Observe that when $n=2b \in \mathbb{N}$ we have $f(n)=\dfrac{(-1)^n(2n-1)+1}{4}=\dfrac{(-1)^{2b}(2(2b)-1)+1}{4}=\dfrac{4b}{4}=b$.\\
+
+\noindent Case 2. Suppose $b$ is a non-positive integer.\\
+\indent Observe that when $n=-2b+1 \in \mathbb{N}$ we have $f(n)=\dfrac{(-1)^n(2n-1)+1}{4}=\dfrac{(-1)^{-2b+1}(2(-2b+1)-1)+1}{4}=$\\
+\indent $\dfrac{(-1)(-4b+2-1)+1}{4}= \dfrac{4b-2+1+1}{4} = b$.\\
+
+\noindent Thus we have shown that for every integer $z$ there exists an $n \in \mathbb{N}$ such that $f(n)=z$. So $f$ is surjective.\\
+
+
+\end{proof}
+\end{document}
+
