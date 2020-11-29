@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[left=8em,right=8em]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{lineno}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+%\linenumbers
+\renewcommand*{\proofname}{Proof}
+\date{}
+\author{}
+\begin{document}
+\centerline{\textbf{Exercises for section 12.3}}
+
+\textbf{Ex 1. Proposition:} Six integers are chosen at random, then at least two of them will have the same remainder when divided by $5$.
+\begin{proof}
+$ $\newline
+Let $A$ denote an arbitrary set of integers where $|A|=6$ and $B=\{0,1,2,3,4\}$. Let $f: A \rightarrow B$ be the function for which $f(x)$ equals the remainder of $x$ when divided by $5$. Because $|A| > |B|$, the pigeonhole principle dictates that $f$ is not injective. Thus at least at least two integers in $A$ must have the same remainder.\\
+\end{proof}
+
+\textbf{Ex 2. Proposition:} If $a$ is a natural number, then there exists two unequal natural numbers $k$ and $l$ for which $a^k-a^l$ is divisible by $10$.
+\begin{proof}
+Let $A=\{a^1, a^2, a^3, ..., a^{11}\}$ and $B=\{0,1,2,...,9\}$. Then let $f: A \rightarrow B$ be the function for which $f(x)$ equals the remainder of $x$ when divided by $10$. Observe that $|A|=11 > 10 = |B|$, thus the pigeonhole principle dictates that $f$ is not injective. So at least two numbers in $A$ have the same remainder and consequently their difference is divisible by $10$.\\
+\end{proof}
+
+\textbf{Ex 3. Proposition:} If six natural numbers are chosen at random, then the sum or differece of two of them is divisible by $9$.
+\begin{proof}
+$ $\newline
+Let $A$ be a set of six natural numbers. Let $B=\{\{0\}, \{1,8\}, \{2,7\}, \{3,6\}, \{4,5\}\}$. Then observe that $B$ contains sets whose sum is divisible by $9$. Define $f: A \rightarrow B$ so that $f(x)$ is the set that contains the remainder of $x$ when divided by $9$. Because $|A| = 6 > 5 = |B|$, by the pigeonhole principle, it follows that $f$ is not injective. Thus there exists $x, y \in A, x \neq y$ such that $f(x)=f(y)$. So $x, y$ either have the same remainder, which means that their difference is divisble by $9$. Or $x, y$ do not have the same remainder, but their sum is divisble by $9$.\\
+\end{proof}
+
+\textbf{Ex 4. Proposition:} Consider a square whose side-length is one unit. If five points are selected within the square, then at least two of these points are within $\dfrac{\sqrt{2}}{2}$ units of each other.
+\begin{proof}
+$ $\newline
+Draw a horizontal and vertical line through the middle of the square to partition it into four equal subsquares. By the pigeonhole principle, it follows that at least one subsquare must contain two or more points. Then the distance between two points in a subsquare is at most the length of the diagonal between opposing corners. Using the Pythagoras Theorem, this length $d$ is $d^2=0.5^2+0.5^2 \leftrightarrow d=\dfrac{\sqrt{2}}{2}$. Thus there must exist at least one pair of points such that they are within $\dfrac{\sqrt{2}}{2}$ units of each other.\\
+\end{proof}
+
+\textbf{Ex 5. Proposition:} Any set of seven distinct natural numbers contains a pair of numbers whose sum or difference is divisble by $10$.
+\begin{proof}
+$ $\newline
+Let $A$ be a set of seven distinct natural numbers. Let $B=\{\{0\}, \{5\}, \{1, 9\}, \{2, 8\}, \{3, 7\}, \{4, 6\} \}$. Observe that the elements of $B$ with cardinality $2$ sum up to $10$. Then let $f: A \rightarrow B$ be defined such that $f(x)$ equals the set that contains the remainder of $x$ when divided by $10$. Because $|A|= 7 > 6 = |B|$, the pigeonhole principle dictates that $f$ is not injective. Thus there exists $x, y$ such that $f(x)=f(y)$. In the case that $x$ and $y$ have the same remainder, their difference is divisble by $10$. In the case they are not the same, their sum is divisble by $10$.\\
+\end{proof}
+
+\textbf{Ex 6.}
+\begin{proof}
+$ $\newline
+Let the great circle go through any two points. The great circle partitions the sphere into two parts with $3$ which combined contain $3$ points. Then by the pigeonhole principle it follows that at least one part must have $2$ or more points. Thus the hempishere with the part with the most points is garantueed to have $4$ or more points.\\
+\end{proof}
+
+\textbf{Ex 7. Proposition:} Let $n$ be a natural number. Any subset $X \subseteq \{1,2,3,...,2n\}$ with $|X| > n$ contains two (unequal) elements $a, b \in X$ for which $a|b$ or $b|a$.
+\begin{proof}
+$ $\newline
+Skipped.
+\\
+\end{proof}
+\end{document}
