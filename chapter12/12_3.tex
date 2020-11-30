@@ -26,6 +26,7 @@ Let $A$ denote an arbitrary set of integers where $|A|=6$ and $B=\{0,1,2,3,4\}$.
 
 \textbf{Ex 2. Proposition:} If $a$ is a natural number, then there exists two unequal natural numbers $k$ and $l$ for which $a^k-a^l$ is divisible by $10$.
 \begin{proof}
+$ $\newline
 Let $A=\{a^1, a^2, a^3, ..., a^{11}\}$ and $B=\{0,1,2,...,9\}$. Then let $f: A \rightarrow B$ be the function for which $f(x)$ equals the remainder of $x$ when divided by $10$. Observe that $|A|=11 > 10 = |B|$, thus the pigeonhole principle dictates that $f$ is not injective. So at least two numbers in $A$ have the same remainder and consequently their difference is divisible by $10$.\\
 \end{proof}
 
@@ -56,7 +57,7 @@ Let the great circle go through any two points. The great circle partitions the 
 \textbf{Ex 7. Proposition:} Let $n$ be a natural number. Any subset $X \subseteq \{1,2,3,...,2n\}$ with $|X| > n$ contains two (unequal) elements $a, b \in X$ for which $a|b$ or $b|a$.
 \begin{proof}
 $ $\newline
-Skipped.
+Let $A=\{1,2,3,...,2n\}$. Then let $R$ be the equivalence relation on $A$ defined as $a R b$ if and only if $a \div b$ is a power of $2$ or $b \div a$ is a power of $2$. So $R$ has $n$ equivalence classes, one for each odd integer in $A$. By the definition of $R$, if two numbers are in the same equivalence class, then at least one divides the other. Because $|X|>n$ and $R$ has $n$ equivalence classes, by the pigeonhole principle, it follows that at least two numbers in $X$ must come from the same equivalence class. Thus $X$ must contain two elements such that one divides the other.\\
 \\
 \end{proof}
 \end{document}
