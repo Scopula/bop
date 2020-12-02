@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[left=8em,right=8em]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{lineno}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+%\linenumbers
+\renewcommand*{\proofname}{Proof}
+\date{}
+\author{}
+\begin{document}
+\centerline{\textbf{Exercises for section 12.5}}
+
+\textbf{Ex 1. Proposition:} $f : \mathbb{Z} \rightarrow \mathbb{Z}$ defined by $f(n)=6-n$ is bijective.
+\begin{proof}
+$ $\newline
+First we show $f$ is injective. Suppose $f(x)=f(y)$ where $x, y \in \mathbb{Z}$, then $f(x)=f(y) \leftrightarrow 6-x=6-y \leftrightarrow x=y$. Thus $f$ is injective.
+
+Then we show that $f$ is surjective. Suppose $x \in \mathbb{Z}$. Observe that when $y=6-x \in \mathbb{Z}$ we have $f(y)=6-y=6-(6-x)=x$. Thus $f$ is surjective.\\
+\end{proof}
+
+Let $n=f(y)=6-y$, then $n = 6-y \leftrightarrow y=6-n$. So $f^{-1}(n)=6-n$.
+
+\textbf{Ex 2.}
+
+Let $x=f(y)$, then $x=f(y) \leftrightarrow x = \dfrac{5y+1}{y-2} \leftrightarrow xy-2x=5y+1 \leftrightarrow xy-5y=1+2x \leftrightarrow y=\dfrac{1+2x}{x-5}$. So $f^{-1}(x)=\dfrac{1+2x}{x-5}$.
+
+\textbf{Ex 3.Proposition:} Let $B = \{2^n: n \in \mathbb{Z}\}$. Then $f: \mathbb{Z} \rightarrow B$ defined as $f(n)=2^n$ is bijective.
+\begin{proof}
+$ $\newline
+First we show that $f$ is injective. Suppose $f(x)=f(y)$ for some $x, y \in \mathbb{Z}$. Then $f(x)=f(y) \leftrightarrow 2^x=2^y \leftrightarrow x = y$. Thus $f$ is injective.
+
+Then we show that $f$ is surjective. Suppose $b \in B$. By the definition of $B$ we have $b=2^x$ for some $x \in \mathbb{Z}$. Thus $f(x)=2^x=b$ and consequently $f$ is surjective.\\
+\end{proof}
+
+Let $x = f(y)$, then $x=f(y) \leftrightarrow x = 2^y \leftrightarrow y=log_2(x)$. So $f^{-1}(x)=log_2(x)$.
+
+\textbf{Ex 4.}
+
+Let $x=f(y)$, then $x=f(y) \leftrightarrow x = e^{y^3+1} \leftrightarrow ln(x) = (y^3+1)ln(e) \leftrightarrow y = \sqrt[3]{ln(x)-1}$. So $f^{-1}(x)=\sqrt[3]{ln(x)-1}$.
+
+\textbf{Ex 5.}
+
+Let $x=f(y)$, then $x=f(y) \leftrightarrow x = \pi y - e \leftrightarrow y=\dfrac{x+e}{\pi}$. So $f^{-1}(x)=\dfrac{x+e}{\pi}$.
+
+\textbf{Ex 6.}
+
+Let $(m, n)=f(x,y)$, then $(m, n) = f(x, y) \leftrightarrow (m, n) = (5x+4y, 4x+3y)$ yields the following system of linear equations
+\begin{align*}
+m = 5x+4y\\
+n = 4x+3y
+\end{align*}
+Solving the system we get $y=4m-5n$ and $x=4n-3m$. So $f^{-1}(m, n) = (4n-3m, 4m-5n)$.
+\newpage
+\textbf{Ex 7. Proposition:} Let $f: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ defined as $f(x, y)=((x^2+1)y, x^3)$ is bijective.
+\begin{proof}
+$ $\newline
+First we show that $f$ is injective. Suppose $f(x, y) = f(x', y')$ for some $x, x', y, y' \in \mathbb{R}$. So $((x^2+1)y, x^3)=(((x')^2+1)y', (x')^3)$ yields the following equations
+\begin{align*}
+(x^2+1)y=((x')^2+1)y'\\
+x^3=(x')^3
+\end{align*}
+The second equation is equivalent to $x=x'$, plugging that into the first we get
+$(x^2+1)y=((x')^2+1)y' \leftrightarrow (x^2+1)y=(x^2+1)y' \leftrightarrow y = y'$. Thus we have that $x=x'$ and $y=y'$. So $f$ is injective.
+
+Then we show that $f$ is surjective. Suppose $(a, b) \in \mathbb{R}^2$. Then when $x=\sqrt[3]{b}$ and $y=\dfrac{a}{b^{2/3}+1}$ we have $f(x, y)=(a, b)$. Thus $f$ is surjective.\\
+\end{proof}
+
+From the surjective part of the proof above, we have that $f^{-1}(x,y)=(\sqrt[3]{y}, \dfrac{x}{y^{2/3}+1})$.
+
+\textbf{Ex 8.}
+
+We already showed $\theta$ to be bijective in exercise $14$, section 12.2. Let $X = \theta(Y)$, then $X = \theta(Y) \leftrightarrow X = \overline{Y} \leftrightarrow Y = \overline{X}$. So $\theta^{-1}(X)=\overline{X}$.
+
+\textbf{Ex 9. Proposition:} $f: \mathbb{R} \times \mathbb{N} \rightarrow \mathbb{N} \times \mathbb{R}$ defined as $f(x, y) = (y, 3xy)$ is bijective.
+\begin{proof}
+$ $\newline
+First we show that $f$ is injective. Suppose $f(a, b)=f(a', b')$ for some $a, a' \in \mathbb{R}, b, b' \in \mathbb{N}$. So we have $f(a,b)=f(a',b') \leftrightarrow (b, 3ab) = (b', 3a'b')$. From this it directly follows that $b=b'$. Plugging that into the second equation we get $3ab=3a'b' \leftrightarrow 3ab=3a'b \leftrightarrow a = a'$. TThus $a=a'$ and $b=b'$, which implies that $f$ is injective.
+
+Then we show that $f$ is surjective. Suppose $(a, b) \in \mathbb{N} \times \mathbb{R}$. Then when $y=a$ and $x=\dfrac{b}{3a}$ we have $f(x, y)=(a,b)$. Thus $f$ is surjective.\\
+\end{proof}
+
+From the surjective part of the proof above we have $f^{-1}(x,y)=(\dfrac{y}{3x}, x)$.
+
+\textbf{Ex 10.}
+
+The piecewise function below was derived through case-work.
+
+    \[ f(x)^{-1} = \begin{cases} 
+       -2x+1 &x \leq 0\\
+       2x    &x > 0
+       
+       \end{cases}
+    \]
+\end{document}
