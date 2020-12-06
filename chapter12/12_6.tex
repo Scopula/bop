@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage[left=8em,right=8em]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{lineno}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+%\linenumbers
+\renewcommand*{\proofname}{Proof}
+\date{}
+\author{}
+\begin{document}
+\centerline{\textbf{Exercises for section 12.6}}
+
+\textbf{Ex 1.}
+
+$f([-3,5]) = \{x^2+3 : x \in [-3,5] \}=[3, 28]$
+
+$f^{-1}([12, 19])= \{ x \in \mathbb{R} : f(x) \in [12,19] \} = [-4, -3] \cup [3, 4]$
+
+\textbf{Ex 2.}
+
+$f(\{1,2,3\})= \{ f(x) : x \in \{1,2,3\}\} = \{3, 8\}$
+
+$f(\{4,5,6,7\})=\{f(x) : x \in \{4,5,6,7\}\} = \{1,2,4,6\}$
+
+$f(\emptyset)= \emptyset$
+
+$f^{-1}(\{0,5,9\})= \{x \in \{1,2,...,7\} : f(x) \in \{0,5,9\}\} = \emptyset$
+
+$f^{-1}(\{0,3,5,9\})=\{1,3\}$
+
+\textbf{Ex 3.}
+
+There are ${7 \choose 3} \cdot{} 4^4 = 8960$ different functions such that $|f^{-1}(\{3\})|=3$.
+
+\textbf{Ex 4.}
+
+There are ${8 \choose 4} \cdot{} 6^4 = 90720$ different functions such that $|f^{-1}(\{2\})|=90720$.
+
+\textbf{Ex 5. Proposition:} If $f : A \rightarrow B$ and a subset $X \subseteq A$, then $X \subseteq f^{-1}(f(X))$.
+\begin{proof}
+$ $\newline
+Suppose $x \in X$. Let $Y=f(X)= \{ f(z) :z \in X \}$. So we have $f(x) \in Y$. Then by the preimage definition $f^{-1}(Y)= \{a \in A: f(a) \in Y\}$. Because $x \in A$ and $f(x) \in Y$, it follows that $x \in f^{-1}(Y)$. Thus we have shown that $X \subseteq f^{-1}(f(X))$.\\
+\end{proof}
+\textbf{Ex 6. Conjecture:} If $f: A \rightarrow B$ and a subset $Y \subseteq B$, then $f(f^{-1}(Y))=Y$.
+
+We show the conjecture to be false. Suppose $f : \{1\} \rightarrow \{0,1\}$ defined as $f=\{(1,1)\}$. Then observe that when $Y=\{0\}$ we have $f(f^{-1}(Y))=f(\emptyset)=\emptyset$. Thus $f(f^{-1}(Y)) \neq Y$.
+
+\textbf{Ex 7. Proposition:} If $f : A \rightarrow B$ and subsets $W,X \subseteq A$, then $f(W \cap X) \subseteq f(W) \cap f(X)$.
+\begin{proof}
+Suppose $y \in f(W \cap X)$. Then there exists $x \in W$ and $x \in X$ such that $f(x) = y$. That also implies that $y \in f(W)$ and $y \in f(X)$. Thus $y \in f(W) \cap f(X)$ and consequently $f(W \cap X) \subseteq f(W) \cap f(X)$.\\
+\end{proof}
+
+\textbf{Ex 8. Conjecture:} If $f: A \rightarrow B$ and subsets $W,X \subseteq A$, then $f(W \cap X) = f(W)\cap f(X)$.
+
+We show the conjecture to be false. Let $f : \{1,2\} \rightarrow \{99\}$ defined as $f=\{(1, 99), (2,99)\}$. Furthermore, let $W = X = \{1\} \subseteq \{1,2\}$. Then $f(W \cap X) = f(\emptyset) = \emptyset \neq \{99\} = \{99\} \cap \{99\} = f(W) \cap f(X)$.
+
+\newpage
+
+\textbf{Ex 9. Proposition:} If $f: A \rightarrow B$ and subsets $W, X \subseteq A$, then $f(W \cup X) = f(W) \cup f(X)$.
+\begin{proof}
+$ $\newline
+First we show that $f(W \cup X) \subseteq f(W) \cup f(X)$. Suppose $y \in f(W \cup X)$. By the definition of image, there exists an $x \in W$ or $x \in X$ such that $f(x)=y$. Thus $y \in f(W)$ or $y \in f(X)$, which implies $y \in f(W) \cup f(X)$.
+
+Then we show that $f(W) \cup f(X) \subseteq f(W \cup X)$. Suppose $y \in f(W) \cup f(X)$. Thus there exists $x \in W$ or $x \in X$ such that $f(x)=y$. So $x \in W \cup X$ and consequently $y \in f(W \cup X)$.
+
+Because $f(W \cup X) \subseteq f(W) \cup f(X)$ and $f(W) \cup f(X) \subseteq f(W \cup X)$, it follows that $f(W \cup X) = f(W) \cup f(X)$.\\
+\end{proof}
+
+\textbf{Ex 10. Proposition:} If $f: A \rightarrow B$ and subsets $Y, Z \subseteq B$, then $f^{-1}(Y \cap Z)=f^{-1}(Y) \cap f^{-1}(Z)$.
+\begin{proof}
+$ $\newline
+First we show that $f^{-1}(Y \cap Z) \subseteq f^{-1}(Y) \cap f^{-1}(Z)$. Suppose $x \in f^{-1}(Y \cap Z)$. By the definition of preimage, we have that $y = f(x) \in Y \cap Z$. So $y \in Y$ and $y \in Z$. Thus $x \in f^{-1}(Y)$ and $x \in f^{-1}(Z)$ which means that $x \in f^{-1}(Y) \cap f^{-1}(Z)$.
+
+Then we show that $f^{-1}(Y) \cap f^{-1}(Z) \subseteq f^{-1}(Y \cap Z)$. Suppose $x \in f^{-1}(Y) \cap f^{-1}(Z)$. So $x \in f^{-1}(Y)$ and $x \in f^{-1}(Z)$. Thus there exists $y=f(x)$ such that $y \in Y$ and $y \in Z$. So $y \in Y \cap Z$ and consequently $x \in f^{-1}(Y \cap Z)$.
+
+Because $f^{-1}(Y \cap Z) \subseteq f^{-1}(Y) \cap f^{-1}(Z)$ and $f^{-1}(Y) \cap f^{-1}(Z) \subseteq f^{-1}(Y \cap Z)$, it follows that $f^{-1}(Y \cap Z)=f^{-1}(Y) \cap f^{-1}(Z)$.\\
+\end{proof}
+
+\textbf{Ex 11. Proposition:} If $f: A \rightarrow B$ and subsets $Y, Z \subseteq B$, then $f^{-1}(Y \cup Z)=f^{-1}(Y) \cup f^{-1}(Z)$.
+\begin{proof}
+$ $\newline
+First we show that $f^{-1}(Y \cup Z) \subseteq f^{-1}(Y) \cup f^{-1}(Z)$. Suppose $x \in f^{-1}(Y \cup Z)$.
+Then there exists $y=f(x)$ such that $y \in Y \cup Z$. So $y \in Y$ or $y \in Z$. Thus $x \in f^{-1}(Y)$ or $x \in f^{-1}(Z)$, which implies that $x \in f^{-1}(Y) \cup f^{-1}(Z)$.
+
+Then we show that $f^{-1}(Y) \cup f^{-1}(Z) \subseteq f^{-1}(Y \cup Z)$. Suppose $x \in f^{-1}(Y) \cup f^{-1}(Z)$. Then there exists $y=f(x)$ such that $y \in Y$ or $y \in Z$. So $y \in Y \cup Z$ and consequently $x \in f^{-1}(Y \cup Z)$.
+
+Because $f^{-1}(Y \cup Z) \subseteq f^{-1}(Y) \cup f^{-1}(Z)$ and $f^{-1}(Y) \cup f^{-1}(Z) \subseteq f^{-1}(Y \cup Z)$, it follows that $f^{-1}(Y \cup Z)=f^{-1}(Y) \cup f^{-1}(Z)$.\\
+\end{proof}
+
+\newpage
+
+\textbf{Ex 12. Proposition:} Let $f: A \rightarrow B$. $f$ is injective if and only if $X=f^{-1}(f(X))$ for all $X \subseteq A$.
+\begin{proof}
+$ $\newline
+We show that $f$ is injective implies $X=f^{-1}(f(X))$. Suppose $f$ is injective. By exercise 5 we have that $X \subseteq f^{-1}(f(X))$. Then by showing $f^{-1}(f(X)) \subseteq X$, it follows that $X=f^{-1}(f(X))$. Suppose $x \in f^{-1}(f(X))$. So $f(x) \in f(X)$ and since $f$ is injective we have that $x \in X$. Thus $f^{-1}(f(X)) \subseteq X$.
+
+Next we show that $X=f^{-1}(f(X))$ for all $X \subseteq A$ implies $f$ is injective. Observe that when $|A| \leq 1$ it follows that $f$ is injective. So henceforth, we only concern ourselves with $|A| > 1$. Suppose for the sake of contradiction that $X=f^{-1}(f(X))$ for all $X \subseteq A$ and $f$ is not injective. Let $X$ be defined such that $x \in X$, $y \in A$, $y \not\in X$, $x \neq y$, and $f(x)=f(y)$. Then $f(x) = f(y) \in f(X)$ and consequently $x,y \in f^{-1}(f(X))$. But that leads to a contradiction as we have $y \not\in X$, $y \in f^{-1}(f(X))$, and $X=f^{-1}(f(X))$. Thus $f$ is injective.\\
+\end{proof}
+
+\textbf{Ex 12. Proposition:} Let $f: A \rightarrow B$. $f$ is surjective if and only if $Y=f(f^{-1}(Y))$ for all $Y \subseteq B$.
+\begin{proof}
+$ $\newline
+We show that $f$ is surjective implies $Y=f(f^{-1}(Y))$. Suppose $f$ is surjective. 
+First we prove that $Y \subseteq f(f^{-1}(Y))$. Suppose $y \in Y$. By the surjective definition, there exists $x \in f^{-1}(Y)$ such that $y=f(x)$. Then $y \in f(f^{-1}(Y))$ and consequently we have established that $Y \subseteq f(f^{-1}(Y))$. Next we show that $f(f^{-1}(Y)) \subseteq Y$. Suppose $y \in f(f^{-1}(Y))$. Then there exists $x \in f^{-1}(Y)$ such that $y=f(x)$. Thus $y \in Y$ which means that $f(f^{-1}(Y)) \subseteq Y$.
+
+Then we show that $Y=f(f^{-1}(Y))$ for all $Y \subseteq B$ implies $f$ is surjective. Suppose for the sake of contradiction that $Y=f(f^{-1}(Y))$ for all $Y \subseteq B$ and $f$ is not surjective. Let $Y$ be defined such that $y \in Y$ and $f(x) \neq y$ for all $x \in A$. Thus $f(z) \neq y$ for all $z \in f^{-1}(Y)$ and consequently $y \not\in f(f^{-1}(Y))$. But that leads to a contradiction as we $y \in Y$, $y \not\in f(f^{-1}(Y))$ and $Y=f(f^{-1}(Y))$. Thus $f$ is surjective.\\
+\end{proof}
+
+\textbf{Ex 13. Conjecture:} If $f: A \rightarrow B$ and $X \subseteq A$, then $f(f^{-1}(f(X)))=f(X)$.
+\begin{proof}
+$ $\newline
+First we show that $f(f^{-1}(f(X))) \subseteq f(X)$. Suppose $y \in f(f^{-1}(f(X)))$. So there exists $x \in f^{-1}(f(X))$ such that $f(x)=y$. Thus $y \in f(X)$.
+
+Next we show that $f(X) \subseteq f(f^{-1}(f(X)))$. Suppose $y \in f(X)$. Then there exists $x \in f^{-1}(f(X))$ such that $f(x)=y$. Thus $y \in f(f^{-1}(f(X)))$.
+
+Because $f(f^{-1}(f(X))) \subseteq f(X)$ and $f(X) \subseteq f(f^{-1}(f(X)))$, it follows that $f(f^{-1}(f(X)))=f(X)$.\\
+\end{proof}
+
+\textbf{Ex 14. Conjecture:} If $f: A \rightarrow B$ and $Y \subseteq B$, then $f^{-1}(f(f^{-1}(Y)))=f^{-1}(Y)$.
+\begin{proof}
+$ $\newline
+First we show that $f^{-1}(f(f^{-1}(Y))) \subseteq f^{-1}(Y)$. Suppose $x \in f^{-1}(f(f^{-1}(Y)))$.
+Then we have that $f(x) \in f(f^{-1}(Y))$. Thus $x \in f^{-1}(Y)$.
+
+Next we show that $f^{-1}(Y) \subseteq f^{-1}(f(f^{-1}(Y)))$. Suppose $x \in f^{-1}(Y)$. Then we have $f(x) \in f(f^{-1}(Y))$. Thus $x \in f^{-1}(f(f^{-1}(Y)))$.
+
+Because $f^{-1}(f(f^{-1}(Y))) \subseteq f^{-1}(Y)$ and $f^{-1}(Y) \subseteq f^{-1}(f(f^{-1}(Y)))$, it follows that $f^{-1}(f(f^{-1}(Y)))=f^{-1}(Y)$.
+
+\end{proof}
+
+\end{document}
